@@ -1,0 +1,98 @@
+<form id="form3">
+    <div class="form-group">
+        <h2> Part 3: Symptoms </h2>
+
+    </div>
+    <div class="form-group">
+        <p> Over the last two weeks, have you had any of the following symptoms: </p>
+
+    </div>
+    <div class="form-group">
+        <p> Fever? </p>
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="radio" value="yes" name="fever" id="fever_1">
+                Yes
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" value="no" name="fever" id="fever_2">
+                No
+            </label>
+        </div>
+    </div>
+
+    <div id="fever-followup">
+        <div class="form-group">
+            <label for="fever_from"> When did it start? </label>
+            <input type="date" class="form-control"
+                   id="fever_from" name="fever_from"
+                   placeholder="">
+        </div>
+        <div class="form-group">
+            <p> Do you still have it? </p>
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="radio" value="yes" name="fever_still" id="fever_still_1">
+                    Yes
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" value="no" name="fever_still" id="fever_still_2">
+                    No
+                </label>
+            </div>
+        </div>
+        <div class="form-group" id="fever_still-followup">
+            <label for="fever_to"> When did you recover? </label>
+            <input type="date" class="form-control"
+                   id="fever_to" name="fever_to"
+                   placeholder="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <p> Continuous cough? </p>
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="radio" value="yes" name="cough" id="cough_1">
+                Yes
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" value="no" name="cough" id="cough_2">
+                No
+            </label>
+        </div>
+    </div>
+
+    <div id="cough-followup">
+        <div class="form-group">
+            <label for="cough_from"> When did it start? </label>
+            <input type="date" class="form-control"
+                   id="cough_from" name="cough_from"
+                   placeholder="">
+        </div>
+        <div class="form-group">
+            <p> Do you still have it? </p>
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="radio" value="yes" name="cough_still" id="cough_still_1">
+                    Yes
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" value="no" name="cough_still" id="cough_still_2">
+                    No
+                </label>
+            </div>
+        </div>
+        <div class="form-group" id="cough_still-followup">
+            <label for="cough_to"> When did you recover? </label>
+            <input type="date" class="form-control"
+                   id="cough_to" name="cough_to"
+                   placeholder="">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" id="button_form3" form_id="form3">
+        Submit and Continue
+    </button>
+
+</form>
