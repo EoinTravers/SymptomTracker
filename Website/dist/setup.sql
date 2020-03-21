@@ -6,7 +6,8 @@ CREATE TABLE IF NOT EXISTS form1 (
   `age`            varchar,
   `sex`            varchar,
   `postcode`       varchar,
-  `email`          varchar
+  `email`          varchar,
+  `share_email`    varchar
 );
 
 CREATE TABLE IF NOT EXISTS form2 (
@@ -25,10 +26,12 @@ CREATE TABLE IF NOT EXISTS form3 (
   `ip`             varchar,
   `session_id`     varchar,
   `fever`          varchar,
+  `fever_severity` varchar,
   `fever_from`     varchar,
   `fever_still`    varchar,
   `fever_to`       varchar,
   `cough`          varchar,
+  `cough_severity` varchar,
   `cough_from`     varchar,
   `cough_still`    varchar,
   `cough_to`       varchar

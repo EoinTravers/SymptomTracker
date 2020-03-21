@@ -23,6 +23,7 @@ $data["ip"] = $_SERVER['REMOTE_ADDR'];
 $keys = '`' . implode('`, `', array_keys($data)) . '`';
 $values = "'" . implode("', '", array_values($data)) . "'";
 
+// TODO: Use bind_param to defend against injection.
 $insert_query = "INSERT INTO $which_form ($keys) VALUES ($values);";
 echo $insert_query;
 $res = $db->exec($insert_query);

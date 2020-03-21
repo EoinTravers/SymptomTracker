@@ -1,8 +1,6 @@
-import 'bootstrap';
+
 import $ from 'jquery';
 window.$ = $;
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './style.css';
 
 // Logic
 $(document).ready(Begin);
@@ -19,11 +17,19 @@ function Begin(){
                 LogResponses(form_id);
             })
     // Hide follow-up questions untill needed.
+    setup_consent(); // Disable Begin button until consent given
     prepare_followup('tested', 'yes', 'tested-followup');
     prepare_followup('fever', 'yes', 'fever-followup');
     prepare_followup('fever_still', 'no', 'fever_still-followup');
     prepare_followup('cough', 'yes', 'cough-followup');
     prepare_followup('cough_still', 'no', 'cough_still-followup');
+    // Disable Back button
+    // TODO: Use
+    window.history.pushState(null, "", window.location.href);
+    window.onpopstate = function() {
+        window.history.pushState(null, "", window.location.href);
+    };
+
     window.stage = 0;
     window.session_id = random_string();
     // Ready to begin.
@@ -84,8 +90,10 @@ function prepare_followup(q1_name, q1_value, q2_id){
     let target_id = `input[name="${q1_name}"]`;
     let q2_div = $('#' + q2_id);
     q2_div.hide();
-    $(target_id).on('change', function(){
+    console.log(target_id);
+    $(target_id).on('click tap', function(){
         let val = $(target_id + ':checked').val()
+        console.log(val);
         if(val == q1_value) {
             q2_div.show();
         } else {
@@ -100,3 +108,15 @@ function random_string(){
         Math.random().toString(36).substring(2, 15) +
         Math.random().toString(36).substring(2, 15);
 }
+
+function setup_consent(){
+    let box = $('#consent');
+    let btn = $('#button_form0')
+    box.on('change', function(){
+        if(box.is(':checked')){
+            btn.prop('disabled', false)
+        } else {
+            btn.prop('disabled', true)
+        }
+    })
+};
