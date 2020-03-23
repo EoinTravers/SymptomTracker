@@ -1,4 +1,3 @@
-<Files ~ "\.db$">
-  Order allow,deny
-  Deny from all
+<Files "data.db">
+  Require all denied
 </Files>

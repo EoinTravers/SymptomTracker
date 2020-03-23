@@ -43,6 +43,7 @@ function AskStage(stage){
     console.log('AskStage: ' + stage);
     $('form').hide();
     $('#form' + stage).show();
+    window.scrollTo(0, 0);
 }
 
 function LogResponses(form_id){
@@ -112,11 +113,12 @@ function random_string(){
 function setup_consent(){
     let box = $('#consent');
     let btn = $('#button_form0')
+    btn.prop('disabled', true)
     box.on('change', function(){
         if(box.is(':checked')){
-            btn.prop('disabled', false)
+            btn.prop('disabled', false);
         } else {
-            btn.prop('disabled', true)
+            btn.prop('disabled', true);
         }
     })
 };
