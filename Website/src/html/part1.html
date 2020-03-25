@@ -1,6 +1,6 @@
 <form id="form1">
     <div class="form-group">
-        <h2> Part 1: About you </h2>
+        <h2> Part 1: <span class="no-wrap">About you</span> </h2>
 
     </div>
     <div class="form-group">
@@ -29,39 +29,22 @@
     </div>
 
     <div class="form-group">
-        <label for="postcode"> Postcode (Only the area code will be made public.) </label>
+        <label for="postcode"> Postcode area code (the first bit of your postcode) </label>
         <input type="text" class="form-control"
                id="postcode" name="postcode"
-               placeholder="e.g. SW1A 1AA">
+               placeholder="e.g. SW1A">
     </div>
     <div class="form-group">
-        <label for="email"> Email address<br>(We collect this so you can fill in this form again if your details change. This will not be made public.) </label>
-        <input type="email" class="form-control"
-               id="email" name="email"
-               placeholder="">
+        <label for="identifier"> Please enter a nickname. This could be your
+            email address, your actual name, or anything else that's
+            easy for you to remember. We collect this so you can fill
+            in this form again if your details change. This will not
+            be made public.
+        </label>
+        <input type="identifier" class="form-control"
+               id="identifier" name="identifier"
+               placeholder="Your nickname or email.">
     </div>
-
-
-    <div class="form-group">
-        <p>
-            <a href="https://www.gov.uk/government/organisations/public-health-england" target="_blank">
-            Public Health England
-            </a> are working on a more detailed and comprehensive symptom-tracking survey,
-            and are looking for participants.
-            Would you like to be contacted about this survey?
-        </p>
-        <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary">
-                <input type="radio" value="yes" name="share_email" id="share_email_1">
-                Yes
-            </label>
-            <label class="btn btn-primary">
-                <input type="radio" value="no" name="share_email" id="share_email_2">
-                No
-            </label>
-        </div>
-    </div>
-
 
     <button type="submit" class="btn btn-primary" id="button_form1" form_id="form1">
         Submit and Continue

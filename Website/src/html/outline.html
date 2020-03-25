@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta content="text/html; charset=UTF-8" name="Content-Type" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title></title>
         <style>
@@ -9,19 +10,42 @@
                 display: none;
             }
         </style>
+        <link href="sharing.css" rel="stylesheet"/>
+        <link rel="icon" href="logo.png" type="image/gif" sizes="16x16">
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@TraversEoin" />
+        <meta name="twitter:title" content="UK COVID-19 Symptom Tracker" />
+        <meta name="twitter:description" content="Well, ill, or recovered: we want to know how you've been" />
+        <meta name="twitter:image" content="http://symptomtracker.org.uk/dev/logo.png"/>
+
+        <meta property="og:url"                content="http://symptomtracker.org.uk/dev/" />
+        <meta property="og:type"               content="website" />
+        <meta property="og:title"              content="UK COVID-19 Symptom Tracker" />
+        <meta property="og:description"        content="Well, ill, or recovered: we want to know how you've been" />
+        <meta property="og:image"              content="http://symptomtracker.org.uk/dev/logo.png" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43115974-5"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-43115974-5');
+        </script>
+
     </head>
     <body>
 
         <!-- [INSERT: header.html] -->
         <div id="content">
-
             <!-- [INSERT: part0.html] -->
             <!-- [INSERT: part1.html] -->
             <!-- [INSERT: part2.html] -->
             <!-- [INSERT: part3.html] -->
             <!-- [INSERT: part4.html] -->
+            <!-- [INSERT: part5.html] -->
+            <!-- [INSERT: end.html] -->
             <!-- [INSERT: popups.html] -->
-
         </div>
         <script src="./core.js"></script>
         <script src="./app.js"></script>

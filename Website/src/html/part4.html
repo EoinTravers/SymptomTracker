@@ -1,43 +1,87 @@
 <form id="form4">
-    <h2>Thank you</h2>
-    <p>
-        Your responses have been recorded.
-    </p>
-    <h3>What next?</h3>
-    <h4>Need to know more?</h4>
-    <p>
-        Go to
-        <a href="https://www.gov.uk/coronavirus" target="_blank">
-            www.gov.uk/coronavirus
-        </a> for up-to-date information about COVID-19.
-    </p>
+    <div class="form-group">
+        <h2> Part 4: <span class="no-wrap">Other Symptoms</span> </h2>
+    </div>
+    <div id="other-symptoms-added">
+        <h3>Symptoms added:</h3>
+        <p id="list-of-symptoms">
 
-    <h4>
-        Keep your distance
-    </h4>
-    <p>
-        Please keep following the <a href="https://www.gov.uk/government/publications/covid-19-guidance-on-social-distancing-and-for-vulnerable-people/guidance-on-social-distancing-for-everyone-in-the-uk-and-protecting-older-people-and-vulnerable-adults" target="_blank">government advice
-        </a> on social distancing, and keep washing your hands.
-        This is the only way we can stop the coronavirus killing thousands of vulnerable people.
-    </p>
+        </p>
+    </div>
+    <div class="form-group">
+        <p>
+            Over the last four weeks, have you had
+            any other symptoms of any kind you would like to record?
+            Please feel free to tell us about any medical symptoms you have had,
+            even if you're not sure they're related to the coronavirus.
+            You can fill out this section as many times as necessary.
+        </p>
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary">
+                <input type="radio" value="yes" name="other" id="other_1">
+                Yes
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" value="no" name="other" id="other_2">
+                No
+            </label>
+        </div>
+    </div>
 
-    <h4>Get in touch</h4>
-    <p>
-        Have any questions about this survey,
-        or ideas to make it better,
-        including suggestions for what to show on this page?
-        Want to get involved, or donate resources?
-        Email us at
-        <a target="_blank" href="mailto:symptom.tracker.uk@gmail.com">
-            symptom.tracker.uk@gmail.com</a>.
-    </p>
+    <div id="other-followup">
+        <div class="form-group">
+            <label for="other-name"> What was the symptom?  </label>
+            <input type="text" class="form-control"
+                   id="other-name" name="other-name">
+        </div>
 
-    <h4>
-        Do it again
-    </h4>
-    <p>
-        If your symptoms change, feel free to complete this survey again.
-        Make sure to use the same email address,
-        so we can link the data.
-    </p>
+        <div class="form-group">
+            <label for="other_severity"> How severe was it, on a scale from 1 to 5? </label>
+            <select class="form-control" name="other_severity">
+                <option value="na" disabled selected> Select one: </option>
+                <option value="1" > 1 (Mild) </option>
+                <option value="2" > 2 </option>
+                <option value="3" > 3 (Moderate) </option>
+                <option value="4" > 4  </option>
+                <option value="5" > 5 (Severe) </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="other_from"> When did it start? </label>
+            <input type="date" class="form-control"
+                   id="other_from" name="other_from"
+                   placeholder="">
+        </div>
+        <div class="form-group">
+            <p> Do you still have it? </p>
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary">
+                    <input type="radio" value="yes" name="other_still" id="other_still_1">
+                    Yes
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" value="no" name="other_still" id="other_still_2">
+                    No
+                </label>
+            </div>
+        </div>
+        <div class="form-group" id="other_still-followup">
+            <label for="other_to"> When did you recover? </label>
+            <input type="date" class="form-control"
+                   id="other_to" name="other_to"
+                   placeholder="">
+        </div>
+        <button class="btn btn-primary" id="other_symptom_submit" form_id="form4">
+            Submit and enter next symptom
+        </button>
+
+    </div>
+
+    <div id="other-no-followup">
+        <button type="submit" class="btn btn-primary" id="button_form4" form_id="form4">
+            Submit and Continue
+        </button>
+    </div>
+
+
 </form>

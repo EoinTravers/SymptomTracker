@@ -25,12 +25,12 @@ $values = "'" . implode("', '", array_values($data)) . "'";
 
 // TODO: Use bind_param to defend against injection.
 $insert_query = "INSERT INTO $which_form ($keys) VALUES ($values);";
-echo $insert_query;
+// echo $insert_query;
 $res = $db->exec($insert_query);
-if(!$res){
-  echo $db->lastErrorMsg();
-  printf("<br><br>\n\nError message: %s\n", mysqli_error($conn));
-} else {
-  echo "Data logged";
-}
+// if(!$res){
+//   echo $db->lastErrorMsg();
+//   printf("<br><br>\n\nError message: %s\n", mysqli_error($conn));
+// } else {
+//   echo "Data logged";
+// }
 ?>

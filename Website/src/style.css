@@ -39,3 +39,22 @@ input[type='radio'] {
 [type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
+
+.small-print {
+    font-size: 10pt;
+}
+
+.no-wrap {
+    display:inline-block;
+}
+#other-symptoms-added{
+    display: none;
+}
+#list-of-symptoms{
+    display: flex;
+}
+
+.active  {
+    border-color: black !important;
+    border-width: 4px !important;
+}

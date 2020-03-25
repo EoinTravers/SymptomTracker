@@ -6,8 +6,7 @@ CREATE TABLE IF NOT EXISTS form1 (
   `age`            varchar,
   `sex`            varchar,
   `postcode`       varchar,
-  `email`          varchar,
-  `share_email`    varchar
+  `identifier`     varchar
 );
 
 CREATE TABLE IF NOT EXISTS form2 (
@@ -35,4 +34,27 @@ CREATE TABLE IF NOT EXISTS form3 (
   `cough_from`     varchar,
   `cough_still`    varchar,
   `cough_to`       varchar
+);
+
+
+CREATE TABLE IF NOT EXISTS form4 (
+  `id`             integer primary key autoincrement,
+  `timestamp`      datetime DEFAULT CURRENT_TIMESTAMP,
+  `ip`             varchar,
+  `session_id`     varchar,
+  `other`          varchar,
+  `other-name`     varchar,
+  `other_severity` varchar,
+  `other_from`     varchar,
+  `other_still`    varchar,
+  `other_to`       varchar
+);
+
+
+CREATE TABLE IF NOT EXISTS form5 (
+  `id`             integer primary key autoincrement,
+  `timestamp`      datetime DEFAULT CURRENT_TIMESTAMP,
+  `ip`             varchar,
+  `session_id`     varchar,
+  `free-response`  varchar
 );
